@@ -1,0 +1,15 @@
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/bin/Debug/net10.0/oopdemo
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/bin/Debug/net10.0/oopdemo.deps.json
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/bin/Debug/net10.0/oopdemo.runtimeconfig.json
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/bin/Debug/net10.0/oopdemo.dll
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/bin/Debug/net10.0/oopdemo.pdb
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.AssemblyInfoInputs.cache
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.AssemblyInfo.cs
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.csproj.CoreCompileInputs.cache
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.sourcelink.json
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.dll
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/refint/oopdemo.dll
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.pdb
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/oopdemo.genruntimeconfig.cache
+/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/oopdemo/obj/Debug/net10.0/ref/oopdemo.dll
