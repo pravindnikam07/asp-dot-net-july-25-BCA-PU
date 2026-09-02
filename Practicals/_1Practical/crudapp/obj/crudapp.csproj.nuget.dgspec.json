@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/crudapp/crudapp.csproj": {}
+    "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_1Practical/crudapp/crudapp.csproj": {}
   },
   "projects": {
-    "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/crudapp/crudapp.csproj": {
+    "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_1Practical/crudapp/crudapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/crudapp/crudapp.csproj",
+        "projectUniqueName": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_1Practical/crudapp/crudapp.csproj",
         "projectName": "crudapp",
-        "projectPath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/crudapp/crudapp.csproj",
+        "projectPath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_1Practical/crudapp/crudapp.csproj",
         "packagesPath": "/Users/pravindnikam/.nuget/packages/",
-        "outputPath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/crudapp/obj/",
+        "outputPath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_1Practical/crudapp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pravindnikam/.nuget/NuGet/NuGet.Config"
