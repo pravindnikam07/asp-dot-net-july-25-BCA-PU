@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "TWVrKMWRruY=",
+  "success": true,
+  "projectFilePath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Inclass app/crudapp/crudapp.csproj",
+  "expectedPackageFiles": [
+    "/Users/pravindnikam/.nuget/packages/microsoft.data.sqlite/10.0.11/microsoft.data.sqlite.10.0.11.nupkg.sha512",
+    "/Users/pravindnikam/.nuget/packages/microsoft.data.sqlite.core/10.0.11/microsoft.data.sqlite.core.10.0.11.nupkg.sha512",
+    "/Users/pravindnikam/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.12/sqlitepclraw.bundle_e_sqlite3.2.1.12.nupkg.sha512",
+    "/Users/pravindnikam/.nuget/packages/sqlitepclraw.core/2.1.12/sqlitepclraw.core.2.1.12.nupkg.sha512",
+    "/Users/pravindnikam/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.12/sqlitepclraw.lib.e_sqlite3.2.1.12.nupkg.sha512",
+    "/Users/pravindnikam/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.12/sqlitepclraw.provider.e_sqlite3.2.1.12.nupkg.sha512"
+  ],
+  "logs": []
+}
