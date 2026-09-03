@@ -1,0 +1,48 @@
+@page
+@model ControlsDemo.Pages.CounterModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Counter Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .counter {
+            font-size: 40px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Counter Button</h1>
+
+    <div class="counter">
+        Counter: @Model.Count
+    </div>
+
+    <form method="post">
+        <button type="submit" value="increment" name="action">
+            Click Me for Increment
+        </button>
+
+        <button type="submit" value="decrement" name="action">
+            Click Me for Decrement
+        </button>
+    </form>
+
+</body>
+</html>

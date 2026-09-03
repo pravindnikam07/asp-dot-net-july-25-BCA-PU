@@ -1,0 +1,55 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ControlsDemo
+build_property.RootNamespace = ControlsDemo
+build_property.ProjectDir = /Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/Counter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_5Practical/ControlsDemo/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yicfw4jncp
