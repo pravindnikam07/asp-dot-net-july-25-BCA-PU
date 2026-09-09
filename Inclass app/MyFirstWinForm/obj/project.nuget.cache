@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tH60JmWu2jE=",
+  "success": true,
+  "projectFilePath": "/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/MyFirstWinForm.csproj",
+  "expectedPackageFiles": [
+    "/Users/pravindnikam/.nuget/packages/microsoft.windowsdesktop.app.ref/10.0.0/microsoft.windowsdesktop.app.ref.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

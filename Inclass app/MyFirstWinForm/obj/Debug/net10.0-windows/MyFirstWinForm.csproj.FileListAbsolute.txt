@@ -1,0 +1,14 @@
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/bin/Debug/net10.0-windows/MyFirstWinForm
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/bin/Debug/net10.0-windows/MyFirstWinForm.deps.json
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/bin/Debug/net10.0-windows/MyFirstWinForm.runtimeconfig.json
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/bin/Debug/net10.0-windows/MyFirstWinForm.dll
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/bin/Debug/net10.0-windows/MyFirstWinForm.pdb
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.AssemblyInfoInputs.cache
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.AssemblyInfo.cs
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.csproj.CoreCompileInputs.cache
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.dll
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/refint/MyFirstWinForm.dll
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.pdb
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/MyFirstWinForm.genruntimeconfig.cache
+/Users/pravindnikam/Documents/work/Trainings/parul university/2526_even_sem/dot_net/programs/Unit_4/MyFirstWinForm/obj/Debug/net10.0-windows/ref/MyFirstWinForm.dll
