@@ -1,0 +1,110 @@
+﻿
+@page
+@model ListBoxDropDownDemo.Pages.IndexModel
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ListBox and DropDownList</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+
+      .container {
+        width: 500px;
+      }
+
+      .control-group {
+        margin-bottom: 25px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      .listbox {
+        height: 130px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      .result {
+        margin-top: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>ListBox and DropDownList</h1>
+
+      <form method="post">
+        <!-- DropDownList -->
+        <div class="control-group">
+          <label for="city"> Select City </label>
+
+          <select id="city" name="SelectedCity">
+            <option value="">-- Select City --</option>
+
+            <option value="Vadodara">Vadodara</option>
+
+            <option value="Ahmedabad">Ahmedabad</option>
+
+            <option value="Surat">Surat</option>
+
+            <option value="Rajkot">Rajkot</option>
+          </select>
+        </div>
+
+        <!-- ListBox -->
+        <div class="control-group">
+          <label for="skills"> Select Skills </label>
+
+          <select id="skills" name="SelectedSkills" class="listbox" multiple>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="SQL">SQL</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      @if (!string.IsNullOrEmpty(Model.SelectedCity) && Model.SelectedSkills.Any())
+      {
+      <div class="result">
+        <h3>Selected Values</h3>
+
+        <p>
+          <strong>City:</strong>
+          @Model.SelectedCity
+        </p>
+
+        <p>
+          <strong>Skills:</strong>
+          @string.Join(", ", Model.SelectedSkills)
+        </p>
+      </div>
+      }
+    </div>
+  </body>
+</html>

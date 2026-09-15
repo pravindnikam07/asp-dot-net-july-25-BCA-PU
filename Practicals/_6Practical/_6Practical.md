@@ -269,7 +269,8 @@ Delete the existing code and add:
         <button type="submit">Submit</button>
       </form>
 
-      @if (!string.IsNullOrEmpty(Model.SelectedCity)) {
+      @if (!string.IsNullOrEmpty(Model.SelectedCity) &&
+      Model.SelectedSkills.Any()) {
       <div class="result">
         <h3>Selected Values</h3>
 
@@ -302,6 +303,7 @@ Pages/Index.cshtml.cs
 Replace the existing code with:
 
 ```csharp
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ListBoxDropDownDemo.Pages
