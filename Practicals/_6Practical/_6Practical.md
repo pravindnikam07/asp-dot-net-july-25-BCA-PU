@@ -2,78 +2,57 @@
 
 ## Aim
 
-To design an ASP.NET Core webpage containing a **ListBox** and **DropDownList** and demonstrate how to select values from both controls.
+To design an ASP.NET Core webpage containing a **ListBox and DropDownList** and demonstrate selection of values using Razor Pages.
 
 ---
 
-## Learning Objectives
+## 1. Software Requirements
 
-After completing this practical, you will be able to:
-
-- Create an ASP.NET Core Razor Pages application.
-- Create a ListBox using HTML/Razor.
-- Create a DropDownList using HTML/Razor.
-- Handle selected values using C#.
-- Display the selected values on the webpage.
-
----
-
-## Software Requirements
-
-| Requirement      | Software                |
-| ---------------- | ----------------------- |
-| Operating System | macOS / Windows         |
-| IDE              | Visual Studio Code      |
-| Language         | C#                      |
-| Framework        | ASP.NET Core            |
-| Browser          | Chrome / Edge / Firefox |
+| Requirement          | Details                 |
+| -------------------- | ----------------------- |
+| Operating System     | macOS / Windows         |
+| IDE                  | Visual Studio Code      |
+| Programming Language | C#                      |
+| Framework            | ASP.NET Core            |
+| Browser              | Chrome / Edge / Firefox |
 
 ---
 
-# 1. Concept
+# 2. Check .NET SDK
 
-A webpage can provide different controls for allowing users to select values.
+Before creating the project, open **VS Code**.
 
-### ListBox
+Open the integrated terminal:
 
-A **ListBox** displays multiple options in a visible list. The user can select one or multiple options.
+**VS Code → Terminal → New Terminal**
+
+Run:
+
+```bash
+dotnet --version
+```
 
 Example:
 
 ```text
-Select Skills
-
-☐ C#
-☐ Java
-☐ Python
-☐ JavaScript
-☐ SQL
+10.0.100
 ```
 
-### DropDownList
+The exact version may be different.
 
-A **DropDownList** displays options in a compact dropdown menu. Normally, the user selects one option.
-
-Example:
-
-```text
-Select City
-[ Vadodara ▼ ]
-```
-
-In ASP.NET Core Razor Pages, these controls can be created using standard HTML elements:
-
-```html
-<select></select>
-```
-
-A ListBox can be created by using the `multiple` attribute, while a normal `<select>` element is used as a DropDownList.
+If a version number is displayed, the .NET SDK is installed correctly.
 
 ---
 
-# 2. Create the Project
+# 3. Create the ASP.NET Core Project
 
-Open VS Code and open a terminal.
+Navigate to the folder where you want to create the practical.
+
+For example:
+
+```bash
+cd Desktop
+```
 
 Create a new ASP.NET Core Razor Pages project:
 
@@ -81,7 +60,17 @@ Create a new ASP.NET Core Razor Pages project:
 dotnet new webapp -n ListBoxDropDownDemo
 ```
 
-Move into the project:
+The command creates a new project named:
+
+```text
+ListBoxDropDownDemo
+```
+
+---
+
+# 4. Open the Project Folder
+
+Move into the project directory:
 
 ```bash
 cd ListBoxDropDownDemo
@@ -93,27 +82,85 @@ Open the project in VS Code:
 code .
 ```
 
+If the `code` command is not available, open VS Code manually and select:
+
+**File → Open Folder → ListBoxDropDownDemo**
+
 ---
 
-# 3. Project Structure
+# 5. Restore Project Dependencies
 
-The important files are:
+Run:
+
+```bash
+dotnet restore
+```
+
+This downloads/restores the dependencies required by the project.
+
+For this practical, **no additional NuGet package is required** because we are not using a database.
+
+---
+
+# 6. Verify the Project
+
+Before modifying the code, run the default project:
+
+```bash
+dotnet run
+```
+
+The terminal will show something similar to:
+
+```text
+Now listening on: http://localhost:5000
+```
+
+The port may be different.
+
+Open the displayed URL in your browser.
+
+You should see the default ASP.NET Core Razor Pages application.
+
+Stop the application using:
+
+```text
+Ctrl + C
+```
+
+---
+
+# 7. Project Structure
+
+After creating the project, the structure will look similar to:
 
 ```text
 ListBoxDropDownDemo/
 │
 ├── Pages/
+│   ├── Error.cshtml
+│   ├── Error.cshtml.cs
 │   ├── Index.cshtml
-│   └── Index.cshtml.cs
+│   ├── Index.cshtml.cs
+│   ├── Privacy.cshtml
+│   ├── Privacy.cshtml.cs
+│   └── Shared/
+│
+├── Properties/
+│   └── launchSettings.json
 │
 ├── wwwroot/
+│   ├── css/
+│   ├── js/
+│   └── favicon.ico
 │
 ├── appsettings.json
+├── appsettings.Development.json
 ├── Program.cs
 └── ListBoxDropDownDemo.csproj
 ```
 
-For this practical, we will modify:
+For this practical, we only need to modify:
 
 ```text
 Pages/Index.cshtml
@@ -122,7 +169,7 @@ Pages/Index.cshtml.cs
 
 ---
 
-# 4. Design the Webpage
+# 8. Create the Webpage
 
 Open:
 
@@ -130,7 +177,7 @@ Open:
 Pages/Index.cshtml
 ```
 
-Replace its contents with:
+Delete the existing code and add:
 
 ```html
 @page @model ListBoxDropDownDemo.Pages.IndexModel
@@ -174,7 +221,6 @@ Replace its contents with:
       button {
         padding: 10px 20px;
         font-size: 16px;
-        cursor: pointer;
       }
 
       .result {
@@ -196,9 +242,13 @@ Replace its contents with:
 
           <select id="city" name="SelectedCity">
             <option value="">-- Select City --</option>
+
             <option value="Vadodara">Vadodara</option>
+
             <option value="Ahmedabad">Ahmedabad</option>
+
             <option value="Surat">Surat</option>
+
             <option value="Rajkot">Rajkot</option>
           </select>
         </div>
@@ -241,7 +291,7 @@ Replace its contents with:
 
 ---
 
-# 5. Handle Selected Values Using C#
+# 9. Add C# PageModel Code
 
 Open:
 
@@ -249,10 +299,9 @@ Open:
 Pages/Index.cshtml.cs
 ```
 
-Replace its contents with:
+Replace the existing code with:
 
 ```csharp
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ListBoxDropDownDemo.Pages
@@ -263,7 +312,7 @@ namespace ListBoxDropDownDemo.Pages
         public string SelectedCity { get; set; } = string.Empty;
 
         [BindProperty]
-        public List<string> SelectedSkills { get; set; } = new List<string>();
+        public List<string> SelectedSkills { get; set; } = new();
 
         public void OnGet()
         {
@@ -278,30 +327,32 @@ namespace ListBoxDropDownDemo.Pages
 
 ---
 
-# 6. Understanding the Code
+# 10. Understand the DropDownList
 
-## DropDownList
-
-The following code creates the DropDownList:
+The DropDownList is created using:
 
 ```html
 <select id="city" name="SelectedCity"></select>
 ```
 
-The available options are:
+Its options are created using `<option>`:
 
 ```html
 <option value="Vadodara">Vadodara</option>
-<option value="Ahmedabad">Ahmedabad</option>
-<option value="Surat">Surat</option>
-<option value="Rajkot">Rajkot</option>
 ```
 
-The user can select **one city**.
+The user can select one city.
+
+The selected value is automatically bound to:
+
+```csharp
+[BindProperty]
+public string SelectedCity { get; set; }
+```
 
 ---
 
-## ListBox
+# 11. Understand the ListBox
 
 The ListBox is created using:
 
@@ -311,125 +362,77 @@ The ListBox is created using:
 
 The important attribute is:
 
-```text
+```html
 multiple
 ```
 
-It allows the user to select multiple options.
+It allows the user to select more than one option.
 
-The available options are:
-
-```html
-<option value="C#">C#</option>
-<option value="Java">Java</option>
-<option value="Python">Python</option>
-<option value="JavaScript">JavaScript</option>
-<option value="SQL">SQL</option>
-```
-
----
-
-# 7. Data Binding Between HTML and C#
-
-The DropDownList uses:
-
-```html
-name="SelectedCity"
-```
-
-and the C# page model contains:
-
-```csharp
-[BindProperty]
-public string SelectedCity { get; set; }
-```
-
-Similarly, the ListBox uses:
-
-```html
-name="SelectedSkills"
-```
-
-and the C# page model contains:
+The selected values are bound to:
 
 ```csharp
 [BindProperty]
 public List<string> SelectedSkills { get; set; }
 ```
 
-ASP.NET Core binds the submitted form values to these properties.
+Because multiple values can be selected, a `List<string>` is used.
 
-The basic flow is:
+---
+
+# 12. How the Form Works
+
+The webpage contains:
+
+```html
+<form method="post"></form>
+```
+
+When the user clicks **Submit**, the selected values are sent to the server.
+
+The flow is:
 
 ```text
-User Selection
-      ↓
-HTML Form
-      ↓
-POST Request
-      ↓
+User selects City
+        +
+User selects Skills
+        ↓
+      Submit
+        ↓
+    HTTP POST
+        ↓
 ASP.NET Core Model Binding
-      ↓
-C# Properties
-      ↓
+        ↓
+SelectedCity
+SelectedSkills
+        ↓
 Razor Page
-      ↓
-Display Result
+        ↓
+Display selected values
 ```
 
 ---
 
-# 8. Run the Application
+# 13. Run the Application
 
-Open the terminal in the project directory:
+Save all files.
+
+In the VS Code terminal, run:
 
 ```bash
 dotnet run
 ```
 
-The terminal will display a local URL similar to:
+You will see a URL similar to:
 
 ```text
 Now listening on: http://localhost:5000
 ```
 
-The port number may be different.
-
-Open the displayed URL in a browser.
+Open that URL in your browser.
 
 ---
 
-# 9. Expected Output
-
-The webpage displays:
-
-```text
-ListBox and DropDownList
-
-Select City
-[ -- Select City --          ▼ ]
-
-Select Skills
-┌──────────────────────────┐
-│ C#                       │
-│ Java                     │
-│ Python                   │
-│ JavaScript               │
-│ SQL                      │
-└──────────────────────────┘
-
-[ Submit ]
-```
-
-The city dropdown allows one selection.
-
-The ListBox allows multiple selections.
-
----
-
-# 10. Test the Application
-
-### Test 1: DropDownList
+# 14. Test the DropDownList
 
 Select:
 
@@ -437,9 +440,15 @@ Select:
 Vadodara
 ```
 
-### Test 2: ListBox
+from the **Select City** dropdown.
 
-Select:
+---
+
+# 15. Test the ListBox
+
+Select multiple skills.
+
+For example:
 
 ```text
 C#
@@ -447,13 +456,22 @@ Java
 SQL
 ```
 
-Then click:
+On most systems, multiple items can be selected using:
+
+- **Ctrl + Click** on Windows
+- **Command (⌘) + Click** on macOS
+
+---
+
+# 16. Submit the Form
+
+Click:
 
 ```text
 Submit
 ```
 
-The result should display:
+The page should display:
 
 ```text
 Selected Values
@@ -465,84 +483,133 @@ Skills: C#, Java, SQL
 
 ---
 
-# 11. ListBox vs DropDownList
+# 17. Expected Output
 
-| Feature             | ListBox             | DropDownList  |
-| ------------------- | ------------------- | ------------- |
-| Displays options    | List                | Dropdown      |
-| Multiple selection  | Yes                 | Normally no   |
-| Space required      | More                | Less          |
-| HTML implementation | `<select multiple>` | `<select>`    |
-| Example             | Skills              | City          |
-| Suitable for        | Multiple choices    | Single choice |
+The webpage contains:
 
----
+```text
+ListBox and DropDownList
 
-# 12. Important HTML Elements
+Select City
+┌─────────────────────────────┐
+│ -- Select City --         ▼ │
+└─────────────────────────────┘
 
-### `<select>`
+Select Skills
+┌─────────────────────────────┐
+│ C#                          │
+│ Java                        │
+│ Python                      │
+│ JavaScript                  │
+│ SQL                         │
+└─────────────────────────────┘
 
-Creates a selection control.
-
-```html
-<select></select>
+[ Submit ]
 ```
 
-### `<option>`
+After submitting:
 
-Defines an option:
+```text
+Selected Values
 
-```html
-<option value="Java">Java</option>
-```
+City: Vadodara
 
-### `multiple`
-
-Allows multiple selections:
-
-```html
-<select multiple></select>
-```
-
-### `name`
-
-Associates the HTML control with a server-side property:
-
-```html
-<select name="SelectedCity"></select>
+Skills: C#, Java, SQL
 ```
 
 ---
 
-# 13. Common Errors
+# 18. Difference Between ListBox and DropDownList
 
-### Error 1: `dotnet` command not found
+| Feature     | ListBox                      | DropDownList           |
+| ----------- | ---------------------------- | ---------------------- |
+| Display     | List of options              | Dropdown menu          |
+| Selection   | Multiple selections possible | Normally one selection |
+| HTML        | `<select multiple>`          | `<select>`             |
+| C# property | `List<string>`               | `string`               |
+| Example     | Skills                       | City                   |
 
-Check whether the .NET SDK is installed:
+---
+
+# 19. Important Code
+
+### DropDownList
+
+```html
+<select name="SelectedCity">
+  <option value="Vadodara">Vadodara</option>
+  <option value="Ahmedabad">Ahmedabad</option>
+</select>
+```
+
+### ListBox
+
+```html
+<select name="SelectedSkills" multiple>
+  <option value="C#">C#</option>
+  <option value="Java">Java</option>
+  <option value="Python">Python</option>
+</select>
+```
+
+### C# Binding
+
+```csharp
+[BindProperty]
+public string SelectedCity { get; set; } = string.Empty;
+
+[BindProperty]
+public List<string> SelectedSkills { get; set; } = new();
+```
+
+---
+
+# 20. Common Errors
+
+### `dotnet` command not found
+
+Run:
 
 ```bash
 dotnet --version
 ```
 
-If the command is not recognized, install the .NET SDK.
+If it does not display a version, the .NET SDK needs to be installed.
 
----
+### `code` command not found
 
-### Error 2: Page does not show selected values
+Open the project manually in VS Code:
 
-Make sure the form contains:
+```text
+File → Open Folder → ListBoxDropDownDemo
+```
+
+### Multiple ListBox values are not selected
+
+Use:
+
+- **Ctrl + Click** on Windows
+- **Command + Click** on macOS
+
+Also verify that the ListBox contains:
+
+```html
+multiple
+```
+
+### Selected values are not displayed
+
+Verify:
 
 ```html
 <form method="post"></form>
 ```
 
-and the controls have the correct `name` attributes:
+and make sure the names match the C# properties:
 
 ```html
 name="SelectedCity"
 ```
-
-and:
 
 ```html
 name="SelectedSkills"
@@ -550,70 +617,21 @@ name="SelectedSkills"
 
 ---
 
-### Error 3: Multiple skills are not received
+# 21. Viva Questions
 
-Make sure the ListBox contains:
-
-```html
-multiple
-```
-
-and the C# property is a collection:
-
-```csharp
-public List<string> SelectedSkills { get; set; }
-```
-
----
-
-# 14. Viva Questions
-
-### 1. What is a ListBox?
-
-A ListBox is a control that displays a list of options and can allow the user to select one or multiple values.
-
-### 2. What is a DropDownList?
-
-A DropDownList displays a list of options in a dropdown menu, normally allowing one option to be selected.
-
-### 3. Which HTML element is used for both controls?
-
-The HTML `<select>` element is used.
-
-### 4. How is multiple selection enabled?
-
-The `multiple` attribute is used:
-
-```html
-<select multiple></select>
-```
-
-### 5. What is the purpose of the `<option>` element?
-
-It defines an individual option inside a selection control.
-
-### 6. What is `[BindProperty]`?
-
-`[BindProperty]` allows ASP.NET Core Razor Pages to bind submitted form values to a PageModel property.
-
-### 7. Why is `List<string>` used for ListBox values?
-
-Because the ListBox can contain multiple selected values.
-
-### 8. What is the difference between `OnGet()` and `OnPost()`?
-
-`OnGet()` handles HTTP GET requests, while `OnPost()` handles form submissions using HTTP POST.
-
-### 9. Why is `method="post"` used?
-
-It sends the selected form values to the server using an HTTP POST request.
-
-### 10. What is model binding?
-
-Model binding is the process of automatically mapping HTTP request data to C# properties or parameters.
+1. What is a ListBox?
+2. What is a DropDownList?
+3. Which HTML element is used to create these controls?
+4. Which attribute allows multiple selection?
+5. Why is `List<string>` used for the ListBox?
+6. What is `[BindProperty]`?
+7. What is model binding?
+8. What is the purpose of `method="post"`?
+9. What is the difference between `OnGet()` and `OnPost()`?
+10. Why is a DropDownList useful in web applications?
 
 ---
 
 # Result
 
-An ASP.NET Core webpage containing a **ListBox and DropDownList** was successfully designed using Razor Pages. The application accepts selections from both controls and displays the selected values using C# model binding.
+An ASP.NET Core Razor Pages application was successfully created using VS Code. A **DropDownList** and **ListBox** were designed, and the selected values were received using C# model binding and displayed on the webpage.
