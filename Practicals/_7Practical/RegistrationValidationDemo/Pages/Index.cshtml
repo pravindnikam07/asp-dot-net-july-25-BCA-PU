@@ -1,0 +1,260 @@
+﻿@page
+@model RegistrationValidationDemo.Pages.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 9px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .gender {
+            width: auto;
+        }
+
+        .validation {
+            color: red;
+            font-size: 14px;
+        }
+
+        .summary {
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .success {
+            margin-top: 20px;
+            padding: 12px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Registration Form</h1>
+
+    <form method="post">
+
+        <div asp-validation-summary="All" class="summary"></div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+
+            <label asp-for="FullName">
+                Full Name
+            </label>
+
+            <input asp-for="FullName" />
+
+            <span asp-validation-for="FullName"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+
+            <label asp-for="Email">
+                Email
+            </label>
+
+            <input asp-for="Email"
+                   type="email" />
+
+            <span asp-validation-for="Email"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+
+            <label asp-for="Age">
+                Age
+            </label>
+
+            <input asp-for="Age"
+                   type="number" />
+
+            <span asp-validation-for="Age"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+
+            <label asp-for="Phone">
+                Phone Number
+            </label>
+
+            <input asp-for="Phone"
+                   type="text" />
+
+            <span asp-validation-for="Phone"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- City -->
+        <div class="form-group">
+
+            <label asp-for="City">
+                City
+            </label>
+
+            <select asp-for="City">
+
+                <option value="">
+                    -- Select City --
+                </option>
+
+                <option value="Vadodara">
+                    Vadodara
+                </option>
+
+                <option value="Ahmedabad">
+                    Ahmedabad
+                </option>
+
+                <option value="Surat">
+                    Surat
+                </option>
+
+                <option value="Rajkot">
+                    Rajkot
+                </option>
+
+            </select>
+
+            <span asp-validation-for="City"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+
+            <label>
+                Gender
+            </label>
+
+            <input asp-for="Gender"
+                   type="radio"
+                   value="Male"
+                   class="gender" />
+
+            Male
+
+            <input asp-for="Gender"
+                   type="radio"
+                   value="Female"
+                   class="gender" />
+
+            Female
+
+            <br />
+
+            <span asp-validation-for="Gender"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+
+            <label asp-for="Password">
+                Password
+            </label>
+
+            <input asp-for="Password"
+                   type="password" />
+
+            <span asp-validation-for="Password"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+
+            <label asp-for="ConfirmPassword">
+                Confirm Password
+            </label>
+
+            <input asp-for="ConfirmPassword"
+                   type="password" />
+
+            <span asp-validation-for="ConfirmPassword"
+                  class="validation">
+            </span>
+
+        </div>
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="success">
+            <strong>@Model.Message</strong>
+        </div>
+    }
+
+</div>
+
+</body>
+</html>
