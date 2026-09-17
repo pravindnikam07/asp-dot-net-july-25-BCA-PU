@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "RkGjt+Hvzjo=",
+  "success": true,
+  "projectFilePath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_8Practical/apidemo/apidemo.csproj",
+  "expectedPackageFiles": [
+    "/Users/pravindnikam/.nuget/packages/microsoft.aspnetcore.openapi/10.0.0/microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "/Users/pravindnikam/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_8Practical/apidemo/apidemo.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/pravindnikam/Documents/Work/Parul/PU Online learning/WAD BCA july 2025 batch/asp-dot-net-july-25-BCA-PU/Practicals/_8Practical/apidemo/apidemo.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
